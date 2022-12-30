@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+  
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4.3rem;
+    
+}
+nav h1{
+    font-weight: 800;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-top: 1rem;  
+}
+li a {
+    display: block;
+    color: hsl(236, 13%, 42%);
+    text-decoration: none;
+    padding: 0 1rem;
+}
+.content {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+/* Side Nav */
+.sideNav{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: hsl(36, 100%, 99%);
+    overflow-x: hidden;
+    transition: 0.5s ease-in;
+    padding-top: 120px;
+    display: none;
+}
+.sideNav a{
+    padding: 8px 8px 8px 20px;
+    display: block;
+    font-size: 25px;
+    color: black;
+    transition: 0.3s;
+    text-decoration: none;
+   
+}
+.sideNav a:hover{
+    color: hsl(5, 85%, 63%);
+}
+.sideNav .closeBtn{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+/* Main body */
+.side-news{
+    color: hsl(36, 100%, 99%);
+}
+.side-news h1{
+    color: hsl(35, 77%, 62%);
+    margin: 1rem 0;
+}
+hr{
+    margin: 2rem 0;
+}
+.click{
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    color: hsl(36, 100%, 99%);
+    padding: 8px 32px;
+    text-decoration: none;
+    display: inline-block;
+}
+h2{
+    color: hsl(236, 13%, 42%);
+}
+
+
+
+@media screen and (max-width: 480px) {
+    body{
+        padding: 0 0;
+    } 
+    .menu{
+        display: none;
+    }
+    .content{
+        display: initial;
+    }
+    nav{
+        padding: 0 9px;
+    }
+    .sideNav{
+        display: block !important;
+    }
+    .down{
+        padding-top: 2rem;
+    }
+}
